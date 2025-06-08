@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+
+body{
+  font-family: 'Poppins';
+}
+
+  @keyframes header-open {
+    from {
+      transform: translateY(-500px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+  }
+
+  .animate-header-open {
+    animation: header-open 0.5s ease-out forwards;
+  }
+  .showContent{
+        animation: showContent .5s .7s ease-in-out 1 forwards;
+  }
+
+
+  @keyframes arrow-open{
+    from{
+        transform: translateX(1500px);
+    }
+    to{
+        transform: translateX(0);
+    }
+  } 
+  .arrow-open{
+      animation: arrow-open 1s ease forwards;
+  }
+  @keyframes thumbnail-open{
+      from{
+          transform: translateY(500px);
+      }
+      to{
+          transform: translateY(0);
+      } 
+  }
+  .thumbnail-open{
+    animation: thumbnail-open 0.8s ease forwards;
+
+  }
+
+
+}
