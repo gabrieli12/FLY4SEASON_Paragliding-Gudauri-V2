@@ -15,7 +15,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 flex justify-center items-center w-full bg-transparent z-50  ${isSticky ? 'bg-black/60 backdrop-blur-sm py-2' : 'bg-transparent'} `}>
+    <header className={`fixed top-0 flex justify-center items-center w-full bg-transparent z-50 text-white  ${isSticky ? 'bg-black/60 backdrop-blur-sm py-2' : 'bg-transparent'} `}>
       <div className="w-[1200px] max-w-[90%] m-auto grid grid-cols-[50px_1fr_50px] grid-rows-[50px] justify-center items-center z-50 animate-header-open  ">
         <div className="font-bold text-[1.3rem] tracking-[2px]">FLY4SEASON</div>
         <ul className="p-0 m-0 list-none flex justify-center gap-[20px] font-[500]">

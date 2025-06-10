@@ -1,7 +1,7 @@
-import autumn from './assets/slider-imgs/autumn.png'
-import spring from './assets/slider-imgs/spring.png'
-import summer from './assets/slider-imgs/summer.png'
-import winter from './assets/slider-imgs/winter.png'
+import autumn from './assets/slider-imgs/autumn.webp'
+import spring from './assets/slider-imgs/spring.webp'
+import summer from './assets/slider-imgs/summer.webp'
+import winter from './assets/slider-imgs/winter.webp'
 
 
 
