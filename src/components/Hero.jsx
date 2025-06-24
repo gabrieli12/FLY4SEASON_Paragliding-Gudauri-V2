@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import heroBg from '../assets/slider-imgs/spring.png'
 import Seasons from "../MainSliderInfo";
 
 function Hero() {
@@ -22,18 +21,18 @@ function Hero() {
       </a>
 
       <div>
-        <div className="absolute inset-0 overflow-hidden  duration-[0.5s] ">
+        <div className="absolute inset-0 overflow-hidden  duration-[0.5s]   ">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover  "
             src={choosenSeason.img}
             alt="Spring season paragliding gudauri background"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/90 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 z-10"></div>
 
-          <div className="absolute left-[10%] top-[20%] w-[500px] max-w-[80%] z-10">
-            <p className="uppercase tracking-[10px] translate-Y-[30px] blur-[20px] opacity-0 showContent">Gudauri Paragliding</p>
-            <h2 className="text-[100px] m-0 translate-Y-[30px] blur-[20px] opacity-0 showContent delay-1000 max-sm:text-[60px]">{choosenSeason.title}</h2>
-            <p className="translate-Y-[30px] blur-[20px] opacity-0 showContent duration-[1.3s]">
+          <div className="absolute left-[10%] top-[20%] w-[500px] max-w-[80%] z-10 contrast-200 drop-shadow-2xl ">
+            <p className="uppercase tracking-[10px] translate-Y-[30px] blur-[20px] opacity-0 animate-show-content">Gudauri Paragliding</p>
+            <h2 className="text-[100px] m-0 translate-Y-[30px] blur-[20px] opacity-0 animate-show-content  max-sm:text-[60px] font-bold">{choosenSeason.title}</h2>
+            <p className="translate-Y-[30px] blur-[20px] opacity-0 animate-show-content  duration-[1.3s] animate-delay-[2s] ">
               {choosenSeason.intro}
             </p>
           </div>
@@ -42,14 +41,14 @@ function Hero() {
 
 
         {/* button arrows */}
-        <div className="absolute top-[30%] right-[50px] z-20 arrow-open">
-          <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black ">{">"}</button>
+        <div className="absolute top-[30%] right-[50px] z-20 arrow-open flex gap-2 animate-arrow-open ">
           <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black ">{"<"}</button>
+          <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black ">{">"}</button>
         </div>
 
 
         {/* thumbnail */}
-        <div className="absolute bottom-[10px] z-20 flex gap-[10px] w-full -[250px] pl-[50px] pr-[50px] box-border overflow-auto justify-center  thumbnail-open delay-[0.4s] max-sm:justify-start ">
+        <div className="absolute bottom-[10px] z-20 flex gap-[10px] w-full -[250px] pl-[50px] pr-[50px] box-border overflow-auto justify-center   delay-[0.4s] max-sm:justify-start animate-thumbnail-open ">
           {
             Seasons.map((item, index) => {
               return (
