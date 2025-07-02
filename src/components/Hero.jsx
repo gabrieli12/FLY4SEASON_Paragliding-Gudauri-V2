@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Seasons from "../MainSliderInfo";
 
+
 function Hero() {
   const [choosenSeason, setChoosenSeason] = useState(Seasons[0]);
 
@@ -21,12 +22,18 @@ function Hero() {
 
       <div>
         <div className="absolute inset-0 overflow-hidden  duration-[0.5s]   ">
-          <img
-            className="w-full h-full object-cover  "
-            src={choosenSeason.img}
-            alt="Spring season paragliding gudauri background"
-            loading="lazy"
-          />
+          <picture>
+            <source media="(max-width: 1600px)" srcset={choosenSeason.mediumScreenImg} />
+
+            {/* <source media="(min-width: 1200px)" srcset={choosenSeason.bigScreenImg} /> */}
+            <img
+              className="w-full h-full object-cover  "
+              src={choosenSeason.bigScreenImg}
+              alt="Spring season paragliding gudauri background"
+              loading="lazy"
+            />
+          </picture>
+
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 z-10"></div>
 
           <div className="absolute left-[10%] top-[20%] w-[500px] max-w-[80%] z-10 contrast-200 drop-shadow-2xl ">
@@ -44,8 +51,8 @@ function Hero() {
       </div>
 
       {/* button arrows */}
-      <div className="absolute top-[30%] right-[50px] z-20 arrow-open flex gap-2 animate-arrow-open ">
-        <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black ">
+      <div className="absolute top-[30%] right-[50px] z-20 arrow-open flex gap-2 animate-arrow-open max-sm:top-[10%] ">
+        <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black">
           {"<"}
         </button>
         <button className="bg-[#eee5] border-none font-mono w-[40px] h-[40px] rounded-[5px] text-[x-large] text-[#eee] duration-[0.5s] hover:bg-[#eee] hover:text-black ">
@@ -61,12 +68,13 @@ function Hero() {
               key={index}
               onClick={thumbnailClick}
               id={index}
-              className="w-[130px] h-[200px] brightness-[.5] duration-500 shrink-0 active:brightness-100"
+              className="w-[130px] max-sm:w-[120px] max-sm:h-[190px] h-[200px] brightness-[.5] duration-500 shrink-0 active:brightness-100"
             >
               <img
                 id={index}
-                className="w-full h-full object-cover rounded-[10px]"
-                src={item.img}
+                className="w-full h-full object-cover rounded-[10px] max-sm:rounded-sm"
+                src={item.smallImage}
+                // src="../public/under-300px/summer.webp"
                 alt={`Image of gudauri paragliding in the ${item.title} season`}
                 loading="lazy"
               />
