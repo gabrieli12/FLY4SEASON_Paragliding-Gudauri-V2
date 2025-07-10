@@ -17,13 +17,27 @@
     0% { transform: translateY(500px); }
     100% { transform: translateY(0); }
   }
+  @keyframes heroBg {
+    0% {opacity: 0.2; }
+    /* 25%{opacity: } */
+    50% {opacity: 0.5;}
+    75{opacity: 0.75;}
+    100% {opacity: 1; }
+  }
+
     /* Animation Properties as CSS Custom Properties */
   --animate-header-open: header-open 0.5s ease-out forwards;
-  --animate-show-content: show-content .5s.7s ease-in-out 1 forwards;
-  --animate-arrow-open: arrow-open 1s ease forwards;
-  --animate-thumbnail-open: thumbnail-open 0.8s ease forwards;
+  --animate-show-content: show-content .5s ease-in-out 1 forwards;
+  --animate-arrow-open: arrow-open 0.5s ease forwards;
+  --animate-thumbnail-open: thumbnail-open 0.5s ease forwards;
+  --animate-heroBg: heroBg 0.5s linear forwards;
 
-  --font-poppins: 'Poppins', sans-serif
+
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-jersey: "Jersey 25", sans-serif;
+  --font-winky: "Winky Rough", sans-serif;
+  
 }
 
 

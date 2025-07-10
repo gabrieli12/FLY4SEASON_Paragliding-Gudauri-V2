@@ -24,6 +24,7 @@ import smallWinter from './assets/under-300px/winter.webp'
 
 const Seasons =  [
     {
+        id: 0,
         title: "Spring",
         bigScreenImg: bigSpring,
         mediumScreenImg: mediumSpring,
@@ -31,6 +32,7 @@ const Seasons =  [
         intro: "Spring flight is radically different from winter, and we can cover more time and altitude because at this time warm air masses are formed which helps us overcome higher altitude."
     },
     {
+        id: 1,
         title: "Summer",
         bigScreenImg: bigSummer,
         mediumScreenImg: mediumSummer,
@@ -38,6 +40,7 @@ const Seasons =  [
         intro: "Summer flight is radically different from winter, and we can cover more time and altitude because at this time warm air masses are formed which helps us overcome higher altitude."
     },
     {
+        id: 2,
         title: "Autumn",
         bigScreenImg: bigAutumn,
         mediumScreenImg: mediumAutumn,
@@ -45,6 +48,7 @@ const Seasons =  [
         intro: "During the winter, the flight is carried out by climbing to a height and is completed only by descending, because at this time the cold air masses do not allow it to fly higher."
     },
     {
+        id: 3,
         title: "Winter",
         bigScreenImg: bigWinter,
         mediumScreenImg: mediumWinter,
