@@ -1,6 +1,7 @@
 import React from "react";
 import bgVideo from "../assets/videos/DJI-05544-(5).webm";
 
+import bgVideo from "/assets/videos/DJI 05544 (5).webm";
 import { Button } from "./homePageComp/WhoAre";
 
 function OnlinePayment() {
