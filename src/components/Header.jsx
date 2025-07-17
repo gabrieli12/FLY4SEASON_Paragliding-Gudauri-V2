@@ -4,11 +4,14 @@ import { useData } from "./Provider";
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
+    const [isSticky2, setIsSticky2] = useState(false);
+
   const { isSidebarOpen, setIsSidebarOpen } = useData();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
+      setIsSticky(window.scrollY > 5 && window.scrollY < 800);
+      setIsSticky2(window.scrollY > 800);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,7 +29,7 @@ function Header() {
       <header
         className={`fixed top-0 pt-3 pb-4 flex justify-center items-cente transition-all duration-1000  w-full z-50 text-white  ${
           isSticky ? "bg-black/60 backdrop-blur-sm py-2" : ""
-        }  ${isSidebarOpen ? "bg-black backdrop-blur-sm" : ""} `}
+        }  ${isSidebarOpen ? "bg-black backdrop-blur-sm" : ""} ${isSticky2 ? 'bg-[#052a3ce4] backdrop-blur-[10px]' : ''} `}
       >
         <div className=" w-[1600px] max-w-[90%] m-auto grid grid-cols-[150px_1fr_200px] grid-rows-[50px] justify-center items-center z-50 animate-header-open max-md:grid-cols-[150px_1fr_50px] gap-5  ">
           <div className="font-bold text-[1.3rem] tracking-[2px]">

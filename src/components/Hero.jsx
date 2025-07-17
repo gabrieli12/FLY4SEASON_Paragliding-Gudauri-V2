@@ -36,7 +36,7 @@ function Hero() {
 
   return (
     <>
-      <link rel="preload" as="image" href={Seasons[0].mediumScreenImg} />
+      <link fetchPriority="high" rel="preload" as="image" href={Seasons[0].mediumScreenImg} />
 
       <section className="h-screen relative text-[#eee] bg-[#010101] overflow-hidden ">
 
@@ -104,7 +104,7 @@ function Hero() {
         </div>
 
         {/* thumbnail */}
-        <div className="absolute bottom-[10px] z-20 flex gap-[10px] w-full -[250px] pl-[50px] pr-[50px] box-border overflow-auto justify-center   delay-[0.4s] max-sm:justify-start animate-thumbnail-open ">
+        <div className="absolute bottom-[50px] z-20 flex gap-[10px] w-full -[250px] pl-[50px] pr-[50px] box-border overflow-auto justify-center   delay-[0.4s] max-sm:justify-start animate-thumbnail-open ">
           {Seasons.map((item, index) => {
             return (
               <div
