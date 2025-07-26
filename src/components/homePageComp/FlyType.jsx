@@ -47,6 +47,7 @@ const FlyTypes = () => {
                 src={type.img}
                 alt={type.alt}
                 className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3 "
+                loading="lazy"
               />
               <div className="absolute bottom-0 w-full h-[90px] bg-black/40 text-white px-7 py-5 transition-all duration-300 group-hover:h-[250px] max-sm:h-[270px] group-hover:bg-black/60 group-hover:backdrop-blur-xs max-lg:h-[250px]">
                 <h2 className="text-2xl font-bold mt-2">{type.title}</h2>

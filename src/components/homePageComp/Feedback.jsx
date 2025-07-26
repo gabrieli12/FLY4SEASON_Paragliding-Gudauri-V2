@@ -107,6 +107,7 @@ const Feedback = () => {
                 src={item.image}
                 alt={`Profile picture of guest - ${item.name}`}
                 className="rounded-full w-11 h-11 object-cover border border-gray-400"
+                loading="lazy"
               />
               <div>
                 <p className="text-sm font-bold text-green-900">{item.name}</p>
@@ -135,6 +136,7 @@ const Feedback = () => {
               src={mainLogo}
               alt="FLY4SEASON Paragliding Gudauri Georgia - Official Logo"
               className="w-32 h-32"
+              loading="lazy"
             />
           </a>
         </div>

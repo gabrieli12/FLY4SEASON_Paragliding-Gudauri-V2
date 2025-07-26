@@ -12,6 +12,7 @@ function OnlinePayment() {
         muted
         preload="metadata"
         className="absolute top-0 left-0  object-cover contrast-125 brightness-50 min-h-screen w-full "
+        loading="lazy"
       >
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.

@@ -6,7 +6,7 @@ function Header() {
   const [isSticky, setIsSticky] = useState(false);
     const [isSticky2, setIsSticky2] = useState(false);
 
-  const { isSidebarOpen, setIsSidebarOpen } = useData();
+  const { isSidebarOpen, setIsSidebarOpen } = useData(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,7 +89,7 @@ function Header() {
             }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
-            onClick={() => useCallback(setIsSidebarOpen(false), [])}
+            onClick={() => setIsSidebarOpen(false)}
           >
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>

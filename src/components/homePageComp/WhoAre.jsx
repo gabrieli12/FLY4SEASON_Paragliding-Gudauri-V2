@@ -28,7 +28,7 @@ export const Button = React.memo(({ value, bg }) => {
 function WhoAre() {
   return (
     <section
-      className={`p-7 py-12 w-full flex justify-center items-center gap-28 bg-[url('./assets/gifs/snow.gif')] bg-center my-32 max-lg:gap-14 max-md:flex-col bg-white `}
+      className={`p-7 py-12 w-full flex justify-center items-center gap-28 bg-[url('/snow.gif')] bg-center my-32 max-lg:gap-14 max-md:flex-col bg-white `}
     >
       <div className=" flex flex-col justify-start items-start">
         <p className="text-5xl font-jersey max-w-96 max-sm:text-4xl">

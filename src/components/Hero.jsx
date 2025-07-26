@@ -123,7 +123,7 @@ function Hero() {
                   src={item.smallImage}
                   // src="../public/under-300px/summer.webp"
                   alt={`Image of gudauri paragliding in the ${item.title} season`}
-                  loading="lazy"
+                  
                 />
                 <div className="absolute right-[10px] bottom-[10px] left-[10px]">
                   {item.title}

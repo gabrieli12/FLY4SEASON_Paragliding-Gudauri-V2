@@ -1,4 +1,3 @@
-import React, { Suspense } from "react";
 import WhoAre from "../components/homePageComp/WhoAre";
 
 // components
@@ -9,9 +8,9 @@ import YouTube from "../components/homePageComp/YouTube";
 import Feedback from "../components/homePageComp/Feedback";
 
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 
-const OtherComponent = React.lazy(() => import("../components/Hero"));
 
 function Home() {
   return (
@@ -19,26 +18,7 @@ function Home() {
       <title>test</title>
 
       <main className="relative min-h-screen">
-        <Suspense
-          fallback={
-            <div className="absolute w-full h-full flex flex-col text-white justify-center items-center gap-16 bg-[#0a3351] max-sm:gap-12">
-              <h2 className="text-4xl font-winky max-sm:text-3xl">
-                FLY4SEASON
-              </h2>
-              <div className="flex gap-3">
-                <div
-                  className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white  "
-                  role="status"
-                ></div>
-
-                <span className="text-2xl font-jersey max-sm:text-xl">
-                  Loading...
-                </span>
-              </div>
-            </div>
-          }
-        >
-          <OtherComponent />
+          <Hero />
 
           <WhoAre />
           
@@ -57,7 +37,6 @@ function Home() {
           <Feedback />
 
           <Footer />
-        </Suspense>
       </main>
     </>
   );
