@@ -58,7 +58,7 @@ const AboutParagliding = () => {
 
 
       <ul
-        className="relative overflow-x-hidden w-full grid grid-cols-2 gap-5 justify-items-start items-start p-5 mt-9 md:hidden max-sm:grid-cols-1 list-disc  text-lg max-sm:px-2"
+        className="relative overflow-x-hidden w-full grid grid-cols-2 gap-5 justify-items-start items-start p-5 mt-9 md:hidden max-sm:grid-cols-1 list-disc  text-lg max-sm:px-2 "
       >
         <li className="max-sm:border-b border-red-400"
           

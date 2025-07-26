@@ -8,7 +8,8 @@ import AboutParagliding from "../components/homePageComp/AboutParagliding";
 import YouTube from "../components/homePageComp/YouTube";
 import Feedback from "../components/homePageComp/Feedback";
 
-// gif
+import Footer from "../components/Footer";
+
 
 const OtherComponent = React.lazy(() => import("../components/Hero"));
 
@@ -40,6 +41,7 @@ function Home() {
           <OtherComponent />
 
           <WhoAre />
+          
           <section className="relative min-h-screen">
             <OnlinePayment />
 
@@ -47,9 +49,14 @@ function Home() {
               <FlyTypes />
             </section>
           </section>
+
           <AboutParagliding />
+
           <YouTube />
+
           <Feedback />
+
+          <Footer />
         </Suspense>
       </main>
     </>
