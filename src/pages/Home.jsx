@@ -10,32 +10,36 @@ import Feedback from "../components/homePageComp/Feedback";
 import Footer from "../components/Footer";
 import Hero from "../components/homePageComp/Hero";
 
-
-
 function Home() {
   return (
     <>
-      <title>test</title>
+      {/* meta tags */}
+      <title>FLY4SEASON - Paragliding in Gudauri</title>
+      <meta
+        name="description"
+        content="Unforgettable Paragliding in Gudauri, Georgia! Experience breathtaking mountain views with our safe and certified pilots. Book your tandem flight today!"
+      />
+
+      {/* display */}
 
       <main className="relative min-h-screen">
-          <Hero />
+        <Hero />
 
-          <WhoAre />
-          
-          <section className="relative min-h-screen">
-            <OnlinePayment />
+        <WhoAre />
 
-            <section className=" pt-16 backdrop-blur-xl bg-amber-100/30 border-t-4 border-amber-100 w-full sticky top-0 ">
-              <FlyTypes />
-            </section>
+        <section className="relative min-h-screen">
+          <OnlinePayment />
+
+          <section className=" pt-16 backdrop-blur-xl bg-amber-100/30 border-t-4 border-amber-100 w-full sticky top-0 ">
+            <FlyTypes />
           </section>
+        </section>
 
-          <AboutParagliding />
+        <AboutParagliding />
 
-          <YouTube />
+        <YouTube />
 
-          <Feedback />
-
+        <Feedback />
       </main>
     </>
   );

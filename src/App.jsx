@@ -6,7 +6,6 @@ import FullPage from "./FullPage";
 const Home = React.lazy(() => import("./pages/Home"));
 const Fly = React.lazy(() => import("./pages/Fly"));
 const About = React.lazy(() => import("./pages/About"));
-const Contact = React.lazy(() => import("./pages/Contact"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
 
 // import Home from "./pages/Home";
@@ -40,7 +39,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path="fly" element={<Fly />} />
             <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
             <Route path="gallery" element={<Gallery />} />
           </Route>
         </Routes>

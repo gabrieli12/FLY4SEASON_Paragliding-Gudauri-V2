@@ -5,7 +5,15 @@ import ComfortAndQuality from "../components/flyPageComp/ComfortQuality";
 function Fly() {
   return (
     <>
-      <title>fly</title>
+      <title>
+        Why Choose Us? - Trusted Partner for Your Needs - FLY4SEASON -
+        Paragliding in Gudauri
+      </title>
+      <meta
+        name="description"
+        content="Discover the many reasons why FLY4SEASON - Paragliding in Gudauri, Georgia is the perfect partner for your needs. We offer comfort and quality, experience pilots, Safety, Transfer around Gudauri - free of charge, and more!"
+      />
+
       <main className="min-h-screen">
         <section className="w-full h-[50vh] relative flex justify-center items-center px-7 ">
           <video
