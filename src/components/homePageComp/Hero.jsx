@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
-import Seasons from "../MainSliderInfo";
-import Aside from "./Aside";
+import Seasons from "../../MainSliderInfo";
+import Aside from "../Aside";
 
 function Hero() {
   const [choosenSeasonIndex, setChoosenSeasonIndex] = useState(0);

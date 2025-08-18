@@ -1,7 +1,7 @@
 import React from "react";
 import bgVideo from "/video-1.webm";
 
-import { Button } from "./homePageComp/WhoAre";
+import { Button } from "../homePageComp/WhoAre";
 
 function OnlinePayment() {
   return (

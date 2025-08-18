@@ -1,14 +1,14 @@
 import WhoAre from "../components/homePageComp/WhoAre";
 
 // components
-import OnlinePayment from "../components/OnlinePayment";
+import OnlinePayment from "../components/homePageComp/OnlinePayment";
 import FlyTypes from "../components/homePageComp/FlyType";
 import AboutParagliding from "../components/homePageComp/AboutParagliding";
 import YouTube from "../components/homePageComp/YouTube";
 import Feedback from "../components/homePageComp/Feedback";
 
 import Footer from "../components/Footer";
-import Hero from "../components/Hero";
+import Hero from "../components/homePageComp/Hero";
 
 
 
@@ -36,7 +36,6 @@ function Home() {
 
           <Feedback />
 
-          <Footer />
       </main>
     </>
   );

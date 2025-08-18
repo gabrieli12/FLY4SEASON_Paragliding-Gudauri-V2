@@ -52,11 +52,6 @@ function Header() {
                 About US
               </Link>
             </li>
-            <li>
-              <Link className="opacity-[0.7] hover:opacity-100" to="contact">
-                Contact Us
-              </Link>
-            </li>
 
             <li>
               <Link className="opacity-[0.7] hover:opacity-100" to="gallery">

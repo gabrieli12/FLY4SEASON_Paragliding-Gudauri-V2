@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { Provider } from './components/Provider'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Aside from './components/Aside'
 
 
@@ -11,6 +12,7 @@ function FullPage() {
             <Header />
             <Aside />
             <Outlet />
+            <Footer />
         </Provider>
     </>
   )

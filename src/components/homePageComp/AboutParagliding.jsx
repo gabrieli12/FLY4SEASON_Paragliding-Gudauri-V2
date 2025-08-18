@@ -1,7 +1,7 @@
 // linear-to-r from-cyan-400 to-green-700 text-white
 const AboutParagliding = () => {
   return (
-    <section className="overflow-hidden relative py-20 px-5 flex flex-col justify-center items-center bg-amber-50 bg-[url('./assets/gifs/giphy.gif')] bg-no-repeat bg-size-[300px] bg-center ">
+    <section className="overflow-hidden relative py-20 px-5 flex flex-col justify-center items-center bg-amber-50 bg-no-repeat bg-size-[300px] bg-center ">
 
 
       <p className="text-3xl text-center mt-12" >

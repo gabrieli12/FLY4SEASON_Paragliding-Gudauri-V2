@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 
 // images
-import lasha from "../../assets/under-300px/pilots/lasha.webp";
-import irakli from "../../assets/under-300px/pilots/irakli.webp";
-import img1 from "../../assets/under-300px/pilots/img1.webp";
+import lasha from "/images/pilots/lasha.webp";
+import irakli from "/images/pilots/irakli.webp";
+import img1 from "/images/pilots/img1.webp";
 import img2 from "../../assets/under-300px/img2.webp";
 
 
