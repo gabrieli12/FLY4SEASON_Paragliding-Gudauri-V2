@@ -26,7 +26,7 @@ function OnlinePayment() {
           deleniti aut aspernatur repudiandae accusantium minima nam doloribus
           atque, doloremque velit corrupti?
         </p>
-        <Button className='text-4xl' value='Book Now' bg='amber-100'  />
+        <a href="https://api.whatsapp.com/send/?phone=%2B995598555791&text&type=phone_number&app_absent=0" target="_blank"><Button className='text-4xl' value='Book Now' bg='amber-100'  /></a>
       </div>
     </section>
   );
