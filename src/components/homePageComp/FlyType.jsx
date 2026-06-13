@@ -16,7 +16,7 @@ const flyTypes = [
   {
     title: "LONG FLIGHT",
     img: long,
-    desc: "A long flight is 30 minutes and costs 500 GEL, Also video recording and more emotions",
+    desc: "A long flight is 30 minutes and costs 550 GEL, Also video recording and more emotions",
     alt: "Long paragliding flight in Gudauri at an affordable price",
   },
   {

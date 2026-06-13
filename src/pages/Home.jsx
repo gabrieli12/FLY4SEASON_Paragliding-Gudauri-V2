@@ -9,6 +9,7 @@ import Feedback from "../components/homePageComp/Feedback";
 
 import Footer from "../components/Footer";
 import Hero from "../components/homePageComp/Hero";
+import ContactBtn from "../components/ContactBtn";
 
 function Home() {
   return (
@@ -19,10 +20,13 @@ function Home() {
         name="description"
         content="Unforgettable Paragliding in Gudauri, Georgia! Experience breathtaking mountain views with our safe and certified pilots. Book your tandem flight today!"
       />
+      <link rel="canonical" href="https://paraglidinggudauri.com" />
+
 
       {/* display */}
 
       <main className="relative min-h-screen">
+         <ContactBtn />
         <Hero />
 
         <WhoAre />

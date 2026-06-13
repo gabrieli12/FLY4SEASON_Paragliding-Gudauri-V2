@@ -1,4 +1,5 @@
-import websiteMainLogo from "../assets/under-300px/site-main-logo.svg";
+import websiteMainLogo from "/main-logo.jpg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,26 +8,28 @@ const Footer = () => {
 
       <div>
         <div >
-          <iframe
+          {/* <iframe
             className="h-[600px]"
             title="our location map"
             width="100%"
             loading="lazy"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2941.9759079022033!2d44.45013607661896!3d42.49206482675093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404529ba491d13ff%3A0x7a62c4474d2749da!2sPanorama%20Gudauri!5e0!3m2!1sen!2sus!4v1717916088645!5m2!1sen!2sus"
-          ></iframe>
+            // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2941.9759079022033!2d44.45013607661896!3d42.49206482675093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404529ba491d13ff%3A0x7a62c4474d2749da!2sPanorama%20Gudauri!5e0!3m2!1sen!2sus!4v1717916088645!5m2!1sen!2sus"
+            src="https://maps.app.goo.gl/a6tFKd64PHmUGN8m6"
+          ></iframe> */}
+          <iframe className="h-[600px]" title="our location map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d735.7444198853209!2d44.4919532!3d42.4707634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404529dfb1c0a857%3A0x743b9627dfc62a20!2s4%20season%20paragliding%20gudauri!5e0!3m2!1sen!2sge!4v1759409964622!5m2!1sen!2sge" width="100%"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       <section className="relative grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-8 bg-black text-white px-20 py-20 pb-36 max-sm:px-10">
         <div className="flex flex-col gap-4 mt-10">
           <p className="text-6xl tracking-wider font-jersey w-72">
-            Fly Four Season
+            Fly <span className="text-red-600">4</span> Season Paragliding
           </p>
           <hr className="w-24 h-1 bg-red-600 border-red-600 rounded-full " />
           <img
             src={websiteMainLogo}
             alt="FLY4SEASON Paragliding Gudauri Georgia - Official Logo"
-            className="w-[70px] h-[70px]  brightness-200"
+            className="w-[70px] h-[70px]  brightness-200 rounded-full"
           />
         </div>
 
@@ -56,7 +59,7 @@ const Footer = () => {
           <li>Georgia, Gudauri</li>
           <li className="mt-4 text-base">
             <a
-              href="https://www.google.com/maps/place/Gudauri,+Georgia/@42.476577,44.47761,14z"
+              href="https://www.google.com/maps?ll=42.470537,44.491834&z=19&t=m&hl=en&gl=GE&mapclient=embed&cid=8375453030027766304"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 underline font-bold"
@@ -70,19 +73,20 @@ const Footer = () => {
         <ul className="mt-8">
           <li className="text-lg font-medium mb-4 tracking-wide">Pages</li>
           {[
-            { name: "Home", href: "./index.html" },
-            { name: "Fly&Safety", href: "./pages/fly-safety/index.html" },
-            { name: "Gallery", href: "./pages/gallery/index.html" },
-            { name: "About Us", href: "./pages/about/index.html" },
-            { name: "Contact Us", href: "./pages/contact/index.html" },
+            { name: "Home", href: "/" },
+            { name: "Fly&Safety", href: "fly" },
+            { name: "Gallery", href: "gallery" },
+            { name: "About Us", href: "about" },
           ].map((page) => (
             <li key={page.name} className="my-2">
+              <Link to={page.href}>
               <a
                 href={page.href}
                 className="relative inline-block after:block after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[3px] after:scale-x-0 after:bg-red-600 after:origin-bottom-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {page.name}
               </a>
+              </Link>
             </li>
           ))}
         </ul>

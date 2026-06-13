@@ -1,5 +1,6 @@
 import TeamSection from "../components/aboutPageComp/TeamSec";
 import Footer from "../components/Footer";
+import ContactBtn from "../components/ContactBtn";
 
 function About() {
   return (
@@ -9,8 +10,11 @@ function About() {
         name="description"
         content="Learn more about our company, mission, and the team behind FLY4SEASON - Paragliding in Gudauri, Georgia."
       />
+            <link rel="canonical" href="https://paraglidinggudauri.com/about" />
+
 
       <main className="w-full ">
+        <ContactBtn />
         <section className="relative w-full h-screen flex justify-center items-center flex-col gap-14 p-16 max-md:px-5 max-sm:gap-10 ">
           <video
             autoPlay

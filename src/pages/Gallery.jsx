@@ -23,6 +23,8 @@ import img20 from "/images/gallery-images/img20.webp";
 import img21 from "/images/gallery-images/img21.webp";
 import img22 from "/images/gallery-images/img22.webp";
 
+import ContactBtn from "../components/ContactBtn";
+
 let images = [
   img1,
   img2,
@@ -59,8 +61,14 @@ function Gallery() {
         name="description"
         content="Explore our breathtaking gallery of mountain views from North Lake Tahoe. See stunning landscapes, crystal-clear lakes, and more!"
       />
+            <link rel="canonical" href="https://paraglidinggudauri.com/gallery" />
+
+
+      
+    
 
       <main>
+        <ContactBtn />
         <section className="w-full h-[60vh] relative flex justify-center items-center px-7 ">
           <video
             autoPlay

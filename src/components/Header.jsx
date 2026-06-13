@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import { useData } from "./Provider";
 
+
+
+
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
-    const [isSticky2, setIsSticky2] = useState(false);
+  const [isSticky2, setIsSticky2] = useState(false);
 
   const { isSidebarOpen, setIsSidebarOpen } = useData(false);
 
@@ -27,15 +30,15 @@ function Header() {
     <>
 
       <header
-        className={`fixed top-0 pt-3 pb-4 flex justify-center items-cente transition-all duration-1000  w-full z-50 text-white  ${
-          isSticky ? "bg-black/60 backdrop-blur-sm py-2" : ""
-        }  ${isSidebarOpen ? "bg-black backdrop-blur-sm" : ""} ${isSticky2 ? 'bg-[#052a3ce4] backdrop-blur-[10px]' : ''} `}
+        className={`fixed top-0 pt-5 pb-7 max-md:pb-16 flex justify-center items-center transition-all duration-1000  w-full z-50 text-white  ${isSticky ? "bg-black/60 backdrop-blur-sm py-2" : ""
+          }  ${isSidebarOpen ? "bg-black backdrop-blur-sm" : ""} ${isSticky2 ? 'bg-[#052a3ce4] backdrop-blur-[10px]' : ''} `}
       >
-        <div className=" w-[1600px] max-w-[90%] m-auto grid grid-cols-[150px_1fr_200px] grid-rows-[50px] justify-center items-center z-50 animate-header-open max-md:grid-cols-[150px_1fr_50px] gap-5  ">
-          <div className="font-bold text-[1.3rem] tracking-[2px]">
-            FLY4SEASON
+        <div className=" w-[1600px] max-w-[90%] m-auto grid grid-cols-[400px_1fr_200px] grid-rows-[50px] justify-center items-center z-50 animate-header-open max-lg:grid-cols-[350px_1fr_50px] max-sm:grid-cols-[250px_1fr_50px] gap-5  ">
+          <div className="font-medium max-sm:text-lg  text-[1.3rem] flex items-center gap-7 self-start    ">
+          <img src="/main-logo.jpg" alt="" className="w-16 rounded-full relative " />
+            <p>FLY<span className="text-red-600">4</span>SEASON&nbsp; PARAGLIDING GUDAURI </p>
           </div>
-          <ul className="relative p-0 m-0 list-none flex justify-center gap-[20px] font-[500] max-md:hidden  ">
+          <ul className="relative p-0 m-0 list-none flex justify-center gap-[20px] font-[500] max-lg:hidden  ">
             <li>
               <Link className="opacity-[0.7] hover:opacity-100" to="/">
                 Home
@@ -67,9 +70,8 @@ function Header() {
 
           <svg
             id="burger-menu"
-            className={`w-7 fill-amber-50 hover:fill-gray-200 duration-500  cursor-pointer max-md:col-start-3 max-md:row-start-1 md:hidden ${
-              isSidebarOpen ? "opacity-0 -z-10" : "opacity-100"
-            }`}
+            className={`w-7 fill-amber-50 hover:fill-gray-200 duration-500  cursor-pointer max-lg:col-start-3 max-lg:row-start-1 lg:hidden ${isSidebarOpen ? "opacity-0 -z-10" : "opacity-100"
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
             onClick={openSideBar}
@@ -79,9 +81,8 @@ function Header() {
 
           <svg
             id="burger-menu"
-            className={`w-9 fill-amber-50 hover:fill-gray-200 duration-500  cursor-pointer max-md:col-start-3 max-md:row-start-1 md:hidden ${
-              isSidebarOpen ? "opacity-100" : "opacity-0 -z-10"
-            }`}
+            className={`w-9 fill-amber-50 hover:fill-gray-200 duration-500  cursor-pointer max-md:col-start-3 max-md:row-start-1 md:hidden ${isSidebarOpen ? "opacity-100" : "opacity-0 -z-10"
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
             onClick={() => setIsSidebarOpen(false)}

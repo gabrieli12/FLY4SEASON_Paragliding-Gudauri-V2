@@ -1,0 +1,28 @@
+# --- FORCE HTTPS and REMOVE WWW ---
+RewriteEngine On
+
+# თუ მომხმარებელი შემოდის http:// ან www ვერსიით → გადაამისამართე https://georgiaadventureseasons.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://paraglidinggudauri.com%{REQUEST_URI} [L,R=301]
+
+; 2. თუ ფაილი ან დირექტორია არსებობს — გამოტოვე
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 3. SPA როუტინგი: მხოლოდ ცნობილი გვერდებისთვის გადამისამართება index.html-ზე
+RewriteRule ^(index\.html)?$ index.html [L]
+RewriteRule ^(about|gallery|fly)(/.*)?$ index.html [QSA,L]
+
+# 4. დანარჩენი ყველაფერი — 404
+RewriteRule ^ - [R=404,L]
+
+# --- REACT ROUTER SUPPORT (Single Page Application) ---
+# თუ მოთხოვნილი ფაილი ან საქაღალდე არ არსებობს, ჩატვირთე index.html
+; Options -MultiViews
+; RewriteCond %{REQUEST_FILENAME} !-f
+; RewriteCond %{REQUEST_FILENAME} !-d
+; RewriteRule ^ index.html [QSA,L]
+
+

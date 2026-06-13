@@ -5,13 +5,13 @@ import { useMemo } from "react";
 
 
 function Aside() {
-    const {isSidebarOpen} = useData()
+    const {setIsSidebarOpen,isSidebarOpen} = useData()
 
 
 
 
   return (
-    <aside className={`w-full bg-amber-50  fixed z-30 pt-5 pb-10 transition-all duration-500 ${isSidebarOpen ? 'top-[75px]' : '-top-[1000px] '} md:hidden ` }>
+    <aside onClick={() => setIsSidebarOpen(false)} className={`w-full bg-amber-50  fixed z-30 pt-5 pb-10 transition-all duration-500 ${isSidebarOpen ? 'top-[120px]' : '-top-[1000px] '} md:hidden ` }>
       <nav>
         <ul className="p-10 m-0 list-none flex flex-col justify-center gap-[20px] font-[500]  ">
           {/* home */}
@@ -69,24 +69,6 @@ function Aside() {
             </Link>
           </li>
 
-          {/* contact us */}
-          <li>
-            <Link
-              className="opacity-[0.8] hover:opacity-100 flex justify-start items-center gap-3"
-            >
-              <svg
-                className="w-6  cursor-pointer"
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#1E124A"
-              >
-                <path d="M480-400q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400ZM320-240h320v-23q0-24-13-44t-36-30q-26-11-53.5-17t-57.5-6q-30 0-57.5 6T369-337q-23 10-36 30t-13 44v23ZM720-80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80Zm0-80v-446L526-800H240v640h480Zm-480 0v-640 640Z" />
-              </svg>
-              Contact Us
-            </Link>
-          </li>
 
           {/* gallery */}
           <li>
